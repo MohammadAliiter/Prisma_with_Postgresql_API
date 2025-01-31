@@ -14,6 +14,20 @@ datasource db {
 }
 
 model User {
-        id Int @id @default(autoincrement())
-        name String
+        id  String  @id @default(uuid());
+        name String 
+        email String
+        isAdmin Boolean
+        largeNumber BigInt
+        preferences Json
+        blob Bytes 
+}
+
+model post {
+  id Int @id @default(autoincrement())
+  rating Float
+  createdAt DateTime
+  upadateAt DateTime
+  author User @relation(fields: [userId], references: [id]);
+  userId Int
 }

@@ -4,7 +4,7 @@ const prisma  = new PrismaClient();
 async function main() {
   // ... you will write your Prisma Client queries here
 
- const user = await prisma.user.create({ data: { name: "Mohammad"}})
+ const user = await prisma.user.create({ data: { name: "Mohamm"}})
  console.log(user); 
 }
 
